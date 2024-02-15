@@ -30,7 +30,7 @@ class KerykeionChartSVG:
         - chart_type: Natal, ExternalNatal, Transit, Synastry (Default: Type="Natal").
         - second_obj: Second kerykeion object (Not required if type is Natal)
         - new_output_directory: Set the output directory (default: output_directory)
-        - lang: language settings (default: "EN")
+        - lang: language settings (default: "PT")
         - new_settings_file: Set the settings file (default: kr.config.json)
     """
 
@@ -240,7 +240,7 @@ class KerykeionChartSVG:
         settings = get_settings(settings_file)
 
         language = settings["general_settings"]["language"]
-        self.language_settings = settings["language_settings"].get(language, "EN")
+        self.language_settings = settings["language_settings"].get(language, "PT")
         self.chart_colors_settings = settings["chart_colors"]
         self.planets_settings = settings["celestial_points"]
         self.aspects_settings = settings["aspects"]
